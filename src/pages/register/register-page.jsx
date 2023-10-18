@@ -16,12 +16,21 @@ const RegisterPage = () => {
   };
 
   return (
-    <form onSubmit={handleRegister}>
-      <input type="text" name="username" placeholder="Username" required />
-      <input type="password" name="password" placeholder="Password" required />
-
-      <button type="submit">Register</button>
-    </form>
+    <div className="auth_login_wrapper">
+      <form onSubmit={handleRegister}>
+        <div>
+          <p> Логин</p>
+          <input type="text" name="username" required />
+        </div>
+        <div>
+          <p>Пароль</p>
+          <input type="password" name="password" required />
+        </div>
+        <button type="submit" className="login_btn">
+          Создать аккаунт
+        </button>
+      </form>
+    </div>
   );
 };
 

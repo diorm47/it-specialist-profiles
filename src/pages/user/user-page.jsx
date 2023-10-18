@@ -1,6 +1,7 @@
 import { useForm } from "react-hook-form";
 import { useDispatch, useSelector } from "react-redux";
-import { updateProfileAction, updateUserAction } from "../../redux/app-reducer"; // предполагается, что у вас есть такой экшен
+import { updateProfileAction, updateUserAction } from "../../redux/app-reducer";
+import "./user-page.css";
 
 const UserPage = () => {
   const { register, handleSubmit, setValue } = useForm();
@@ -13,16 +14,19 @@ const UserPage = () => {
   };
 
   return (
-    <div>
+    <div className="user_page_wrapper">
       <form onSubmit={handleSubmit(onSubmit)}>
-        <input defaultValue={user.username} {...register("username")} />
+        <div className="user_profile_form_wrapper">
+          <div>
+            <p>Логин</p>
+            <input defaultValue={user.username} {...register("username")} />
+          </div>
+        </div>
 
-        <button type="submit">Update</button>
+        <button type="submit" className="login_btn">
+          Сохранить
+        </button>
       </form>
-      <div>
-        <h2>Your Data:</h2>
-        <p>Username: {user.username}</p>
-      </div>
     </div>
   );
 };

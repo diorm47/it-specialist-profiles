@@ -3,3 +3,24 @@
   text-align: center;
   font-size: 30px;
 }
+
+.user_page_content {
+  width: 1000px;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+.user_page_content div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.user_page_content div p:first-child {
+  font-size: 20px;
+  font-weight: 600;
+}
+.user_page_content div p:last-child {
+  font-size: 20px;
+  font-weight: 400;
+}

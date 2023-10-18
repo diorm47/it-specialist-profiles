@@ -1,0 +1,37 @@
+.auth_login_wrapper {
+  width: 500px;
+  margin: 0 auto;
+  margin-top: 200px;
+}
+.auth_login_wrapper form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.auth_login_wrapper form input, .user_profile_form_wrapper input {
+  width: 100%;
+  height: 50px;
+  border-radius: 10px;
+  border: 1px solid rgba(128, 128, 128, 0.679);
+  text-indent: 10px;
+  outline: none;
+  font-size: 19px;
+  font-family: "Inter";
+}
+.auth_login_wrapper div p, .user_profile_form_wrapper div p {
+  font-size: 15px;
+  margin-bottom: 10px;
+  padding-left: 5px;
+  font-weight: 600;
+  color: grey;
+}
+
+.login_btn {
+    width: 100%;
+    margin-top: 20px;
+    background: green;
+    color: #fff;
+    height: 60px;
+    font-size: 22px;
+    font-family: "Inter";
+}

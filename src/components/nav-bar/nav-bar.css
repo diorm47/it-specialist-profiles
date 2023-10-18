@@ -30,3 +30,13 @@ nav {
 .nav_auth_btns a:nth-child(2) button {
   background: blue;
 }
+
+.logged_nav {
+   display: flex;
+   align-items: center;
+   gap: 5px;
+}
+.logged_nav p {
+  color: #fff;
+  font-size: 19px;
+}

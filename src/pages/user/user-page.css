@@ -1,0 +1,13 @@
+.user_page_wrapper {
+    width: 1000px;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+.user_page_wrapper .login_btn {
+    width: 300px;
+
+}
+.user_profile_form_wrapper div {
+    width: 45%;
+}
