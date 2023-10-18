@@ -1,0 +1,78 @@
+.main_content_wrapper {
+  width: 1400px;
+  margin: 0 auto;
+}
+
+header {
+  height: 92vh;
+  background: url(../../assets/header-bg.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.main_title h1 {
+  text-align: center;
+  padding-top: 200px;
+  color: #fff;
+  font-size: 60px;
+}
+.profiles_list {
+  margin: 300px auto;
+}
+.profiles_list h2 {
+  margin-bottom: 40px;
+  font-size: 30px;
+}
+.profiles_list table {
+  width: 100%;
+}
+
+.profiles_list table thead tr {
+  padding: 20px 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.586);
+}
+.profiles_list table td {
+  width: 25%;
+  text-align: center;
+}
+.profiles_list table tbody td:first-child {
+  text-align: left;
+  padding-left: 10px;
+}
+.profiles_list table thead td:first-child {
+  text-align: left;
+  padding-left: 10px;
+}
+.profiles_list table tbody td:last-child {
+  text-align: right;
+  padding-right: 10px;
+}
+.profiles_list table thead td:last-child {
+  text-align: right;
+  padding-right: 10px;
+}
+
+.profiles_list tbody tr {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 0;
+  transition: all 0.4s ease;
+}
+.profiles_list tbody tr:hover {
+  transition: all 0.4s ease;
+  background: rgba(128, 128, 128, 0.219);
+  border-radius: 10px;
+}
+.profiles_list table thead td {
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 600;
+}

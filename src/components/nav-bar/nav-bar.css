@@ -1,0 +1,32 @@
+nav {
+  width: 100%;
+  background: #04738b;
+  padding: 20px 0;
+}
+
+.nav_logo p {
+  color: #fff;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.nav_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav_auth_btns {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.nav_auth_btns button {
+  color: #fff;
+}
+.nav_auth_btns a:nth-child(1) button {
+  background: #08ba81;
+}
+.nav_auth_btns a:nth-child(2) button {
+  background: blue;
+}
