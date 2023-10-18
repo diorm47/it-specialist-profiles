@@ -1,8 +1,20 @@
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { createUserAction, loginUserAction } from "../../redux/app-reducer";
+import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 const RegisterPage = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const isLogged = useSelector((state) => state.app.is_logged);
+  const navigateToMain = () => {
+    navigate(`/`);
+  };
+  useEffect(() => {
+    if (isLogged) {
+      navigateToMain();
+    }
+  }, [isLogged]);
 
   const handleRegister = (e) => {
     e.preventDefault();

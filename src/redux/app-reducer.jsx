@@ -4,6 +4,7 @@ const ADD_PROFILE = "ADD_PROFILE";
 const CREATE_USER = "CREATE_USER";
 const UPDATE_PROFILE = "UPDATE_PROFILE";
 const UPDATE_USER = "UPDATE_USER";
+const DELETE_USER = "DELETE_USER";
 
 const initialState = {
   is_logged: false,
@@ -82,6 +83,13 @@ const appReducer = (state = initialState, action) => {
           return profile;
         }),
       };
+    case DELETE_USER:
+      return {
+        ...state,
+        specialists: state.specialists.filter(
+          (profile) => profile.id !== action.userId
+        ),
+      };
     default:
       return state;
   }
@@ -93,7 +101,12 @@ export const createUserAction = (newUser) => {
     payload: newUser,
   };
 };
-
+export const deleteUserAction = (userId) => {
+  return {
+    type: DELETE_USER,
+    userId,
+  };
+};
 export const loginUserAction = (username, password) => {
   return {
     type: LOGIN_USER,

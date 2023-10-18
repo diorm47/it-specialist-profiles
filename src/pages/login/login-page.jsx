@@ -1,10 +1,23 @@
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 import { loginUserAction } from "../../redux/app-reducer";
 import "./login-page.css";
+import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 const LoginPage = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const isLogged = useSelector((state) => state.app.is_logged);
+  const navigateToMain = (id) => {
+    navigate(`/`);
+  };
+  useEffect(() => {
+    if (isLogged) {
+      navigateToMain();
+    }
+  }, [isLogged]);
 
   const handleLogin = (e) => {
     e.preventDefault();
